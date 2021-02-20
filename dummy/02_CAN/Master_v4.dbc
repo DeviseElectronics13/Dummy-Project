@@ -1,0 +1,884 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: CAN3_Diagonistics_500Kbps CAN2_Secondary_250Kbps CAN1_Primary_250Kbps
+VAL_TABLE_ ECAS_AmbrWarnLamp 2 "Not defined" 1 "Lamp On" 0 "Lamp Off" ;
+VAL_TABLE_ ECAS_LvlCtrlModReq 8 "Exhaust bellows" 7 "Traction help (Load reduce)" 6 "Optimum Traction 2" 5 "Optimum Traction 1" 4 "Pressure ratio 2" 3 "Pressure ratio 1" 2 "Load fixing" 1 "Traction help (load transfer)" 0 "Normal operation" ;
+VAL_TABLE_ ECAS_LiftAxlPosCmnd 1 "up / tag axle unladen;" 0 "down/tag axle laden" ;
+VAL_TABLE_ ECAS_NominalLvlAxlReq 8 "Stop level change" 7 "Lower Level" 6 "Upper Level" 5 "Customer Level" 4 "Preset Level" 3 "Normal Level 3" 2 "Normal Level 2" 1 "Normal Level 1" 0 "Not specified" ;
+VAL_TABLE_ ECAS_AutoTrctnHelp 2 "Reserved" 1 "Enable automatic traction help" 0 "Disable automatic traction help" ;
+VAL_TABLE_ ECAS_KnelReqLS 1 "Kneeling Request" 0 "No kneeling request" ;
+VAL_TABLE_ ECAS_KnelReqRS 0 "No kneeling request" ;
+VAL_TABLE_ ECAS_KnelCtrlModReq 1 "Manually Actuated" 0 "Automatically Actuated" ;
+VAL_TABLE_ ECAS_NominalLvlAxlCtrl 7 "Lower Level" 6 "Upper Level" 5 "Customer Level" 4 "Preset Level" 3 "Normal Level 3" 2 "Normal Level 2" 1 "Normal Level 1" 0 "Not specified" ;
+VAL_TABLE_ HVAC_EnergyMode 15 "Do not care" 3 "Waste energy" 2 "Maximize heat/cool capacity" 1 "Maximize efficiency" 0 "Normal" ;
+VAL_TABLE_ HVAC_HeatrModReq 15 "Do not care" 3 "Normal mode" 2 "Economy mode" 1 "Off due to ADR" 0 "De-activate" ;
+VAL_TABLE_ HVAC_FrontClmtMode 15 "Dont care" 13 "Auto" 6 "Defrost" 5 "Reheat" 4 "Ventilation" 3 "Cooling" 2 "Heating" 1 "Idle" 0 "Off" ;
+VAL_TABLE_ HVAC_Error 3 "Not valid" 2 "Not used" 1 "Active" 0 "Inactive" ;
+VAL_TABLE_ HVAC_AirCurtain 3 "Not valid" 2 "Do not care" 1 "Off" 0 "On" ;
+VAL_TABLE_ HVAC_AuxAlterSts 3 "Void" 2 "Do not care" 1 "Off" 0 "On" ;
+VAL_TABLE_ HVAC_Valve 3 "Not valid" 2 "Do not care" 1 "Open" 0 "Closed" ;
+VAL_TABLE_ HVAC_CompUnload 3 "Void" 2 "Do Not Care" 1 "On" 0 "Off" ;
+VAL_TABLE_ HVAC_RTUType 15 "Not valid" 2 "Slave" 1 "Master" 0 "Single" ;
+VAL_TABLE_ HVAC_RefrigType 15 "Not Valid" 3 "R744" 2 "R1234yf" 1 "R407c" 0 "R134a" ;
+VAL_TABLE_ HVAC_ClimateSubMod 15 "Don't Care" 2 "Defrosting" 1 "Active" 0 "Passive" ;
+VAL_TABLE_ HVAC_ActualClimate 15 "Do not Care" 13 "Auto" 10 "Gas charging" 5 "Reheat" 4 "Ventilation" 3 "Cooling" 2 "Heating" 1 "Idle" 0 "Off" ;
+VAL_TABLE_ HVAC_Availability 3 "Not installed" 2 "Do not care" 1 "Available" 0 "Not available" ;
+VAL_TABLE_ HVAC_VStatus 3 "Void/Not valid" 2 "Do not care" 1 "At least one load is on" 0 "All off" ;
+VAL_TABLE_ HVAC_DoorStatus 3 "Not Available" 2 "Error" 1 "Door Opened" 0 "Door Closed" ;
+VAL_TABLE_ EHPS_Gear 10 "D" 5 "R" 1 "P" 0 "N" ;
+VAL_TABLE_ EHPS_KeyPos 3 "Start" 2 "ON" 1 "ACC" 0 "Lock" ;
+VAL_TABLE_ DCDC_Working 1 "Stop" 0 "Work" ;
+VAL_TABLE_ DCDC_Status 1 "Fault" 0 "Normal" ;
+VAL_TABLE_ DCDC_Power 1 "Power ON" 0 "Shutdown" ;
+VAL_TABLE_ AirComp_Fault 1 "Malfunction" 0 "Normal" ;
+VAL_TABLE_ AirComp_ControllerStatus 3 "Invalid" 2 "Malfunction" 1 "Working" 0 "Stop" ;
+VAL_TABLE_ ACP_KickdownSwitch 3 "Not available" 2 "Not utilized" 1 "Kickdown Active" 0 "Kickdown Passive" ;
+VAL_TABLE_ ACP_LowIdleSwitch 3 "Not available" 2 "Not utilized" 1 "Low idle condition" 0 "Not in low idle condition" ;
+VAL_TABLE_ Contactor 1 "Close" 0 "Open" ;
+VAL_TABLE_ MCU_Condition 1 "Normal" 0 "Fault" ;
+VAL_TABLE_ MotorFaultSymbol 7 "ControlTempWarn" 6 "ControlOverTemp" 5 "ControlInverterFail" 4 "AC_Overflow" 3 "DC_UnderV" 2 "DC_OverV" 1 "MainKFailure" 0 "PreChargeKFailure" ;
+VAL_TABLE_ MotorFaultCode 0 "Normal" ;
+VAL_TABLE_ MCU_Status 1 "Close Aux Contactor" 0 "Close Main Contactor" ;
+VAL_TABLE_ OperatingMode 1 "Speed" 0 "Torque" ;
+VAL_TABLE_ Battery_Power_Switch_Off_Request 7 "Invalid value" 6 "Description for the value '0x6'" 5 "Description for the value '0x5'" 4 "Description for the value '0x4'" 3 "Delayed_Switch_Off_Request" 2 "Immediate_Switch_Off_Request" 1 "ImmediateSwitchOffWithoutPermiss" 0 "No_Switch_Off_Request" ;
+VAL_TABLE_ Batt_Power_Distribution_Status 3 "Invalid value" 2 "PowerDistribution_InProgress" 1 "Power_Distributed" 0 "Power_Not_Distributed" ;
+VAL_TABLE_ Batt_External_Insul_Test_Status 7 "Invalid value" 6 "Description for the value '0x6'" 5 "Description for the value '0x5'" 4 "Insulation_Test_Failed_Sev3" 3 "Insulation_Test_Failed_Sev2" 2 "Insulation_Test_Failed_Sev1" 1 "Insulation_Test_In_Progress" 0 "Insulation_Test_Correct" ;
+VAL_TABLE_ Battery_Operating_Status 3 "Invalid value" 2 "Failure" 1 "Degraded" 0 "Normal" ;
+VAL_TABLE_ Battery_State 7 "Invalid value" 6 "Description for the value '0x6'" 5 "Description for the value '0x5'" 4 "Description for the value '0x4'" 3 "Charge State" 2 "Drive State" 1 "Park_State" 0 "Off_State" ;
+VAL_TABLE_ Battery_Keep_Active_Request 1 "Keep_Active" 0 "Keep_Not_Active" ;
+VAL_TABLE_ Battery_Charge_Completed 1 "Charge_Completed" 0 "Charge_Not_Completed" ;
+VAL_TABLE_ Battery_Equalization_Status 1 "Equalization_In_Progress" 0 "No_Equalization" ;
+VAL_TABLE_ Battery_Ext_Insulation_Test_Ctrl 3 "Invalid value" 2 "Test_Not_Allowed" 1 "Test_Allowed&ResultInhibited" 0 "TestAllowed&ResultNotInhibited" ;
+VAL_TABLE_ Battery_State_Request 7 "Invalid value" 6 "Description for the value '0x6'" 5 "Description for the value '0x5'" 4 "Description for the value '0x4'" 3 "Charge" 2 "Operational_State_Request" 1 "Park_State_Request" 0 "Off_State_Request" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ CountBattery_Power_Switch_Off : 0|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Battery_Power_Switch_Off_Request : 0|3@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Battery_Power_Switch_Off_Delay : 0|8@0- (1,0) [0|0] "s" Vector__XXX
+ SG_ VCU_EBS_PctTrqPeakPt5_Tx5_14 : 0|8@1- (1,0) [-128|127] "%" Vector__XXX
+ SG_ VCU_EBS_RefRetTorq_Tx5_13 : 0|16@1+ (1,0) [0|65535] "Nm" Vector__XXX
+ SG_ VCU_EBS_RetSpeedPeakPt5_Tx5_12 : 0|16@1+ (0.125,0) [0|8191.875] "RPM" Vector__XXX
+ SG_ VCU_EBS_PctTorqPt4_Tx5_11 : 0|8@1- (1,0) [-128|127] "%" Vector__XXX
+ SG_ VCU_EBS_RetSpeedPt4_Tx5_10 : 0|16@1+ (0.125,0) [0|8191.875] "RPM" Vector__XXX
+ SG_ VCU_EBS_PctTorqPt3_Tx5_9 : 0|8@1- (1,0) [-128|127] "%" Vector__XXX
+ SG_ VCU_EBS_RetSpeedPt3_Tx5_8 : 0|16@1+ (0.125,0) [0|8191.875] "RPM" Vector__XXX
+ SG_ VCU_EBS_PctTorqMaxPt2_Tx5_7 : 0|8@1- (1,0) [-128|127] "%" Vector__XXX
+ SG_ VCU_EBS_MaxRetSpeedPt2_Tx5_6 : 0|16@1+ (0.125,0) [0|8191.875] "RPM" Vector__XXX
+ SG_ VCU_EBS_PctTorqIdlePt1_Tx5_5 : 0|8@1- (1,0) [-128|127] "%" Vector__XXX
+ SG_ VCU_EBS_RetSpeedIdlePt1_Tx5_4 : 0|16@1+ (0.125,0) [0|8191.875] "RPM" Vector__XXX
+ SG_ VCU_EBS_RetCtrlMethod_Tx5_3 : 0|8@1+ (1,0) [0|255] "step" Vector__XXX
+ SG_ VCU_EBS_RetLocation_Tx5_2 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ VCU_EBS_RetType_Tx5_1 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ VCU_EBS_SupTSC1CtrlGrp4_Tx4_27 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_EBS_SupTSC1CtrlGrp3_Tx4_26 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_EBS_SupTSC1CtrlGrp2_Tx4_25 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_EBS_SupTSC1CtrlGrp1_Tx4_24 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_EBS_SupVarRtTSC1_Tx4_23 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_EBS_DefaultTrqLt_Tx4_22 : 0|16@1+ (0.125,0) [0|8191.875] "RPM" Vector__XXX
+ SG_ VCU_EBS_MmntInertia_Tx4_21 : 0|16@1+ (0.004,0) [0|262.14] "kg/m^2" Vector__XXX
+ SG_ VCU_EBS_ExtRqSpdCtrlRngUL_Tx4_20 : 0|16@1+ (0.125,0) [0|8191.875] "RPM" Vector__XXX
+ SG_ VCU_EBS_ReqTrqCtrlRngUL_Tx4_19 : 0|8@1- (1,0) [-128|127] "%" Vector__XXX
+ SG_ VCU_EBS_ReqTrqCtrlRngLL_Tx4_18 : 0|8@1- (1,0) [-128|127] "%" Vector__XXX
+ SG_ VCU_EBS_ReqSpeedCtrlRngUL_Tx4_17 : 0|8@1+ (10,0) [0|2550] "RPM" Vector__XXX
+ SG_ VCU_EBS_ReqSpeedCtrlRngLL_Tx4_16 : 0|8@1+ (10,0) [0|2550] "" Vector__XXX
+ SG_ VCU_EBS_MaxMomOvrTimeLt_Tx4_15 : 0|8@1+ (0.1,0) [0|25.5] "s" Vector__XXX
+ SG_ VCU_EBS_MaxMomOvrSpdPt7_Tx4_14 : 0|16@1+ (0.125,0) [0|8191.875] "RPM" Vector__XXX
+ SG_ VCU_EBS_RefEngTorq_Tx4_13 : 0|16@1+ (1,0) [0|65535] "Nm" Vector__XXX
+ SG_ VCU_EBS_KEndSpeedGov_Tx4_12 : 0|16@1+ (0.00078125,0) [0|51.19921875] "%/RPM" Vector__XXX
+ SG_ VCU_EBS_SpeedHiIdlePt6_Tx4_11 : 0|16@1+ (0.125,0) [0|8191.875] "RPM" Vector__XXX
+ SG_ VCU_EBS_PctTorqPt5_Tx4_10 : 0|8@1- (1,0) [-128|127] "%" Vector__XXX
+ SG_ VCU_EBS_SpeedPt5_Tx4_9 : 0|16@1+ (0.125,0) [0|8191.875] "RPM" Vector__XXX
+ SG_ VCU_EBS_PctTorqPt4_Tx4_8 : 0|8@1- (1,0) [-128|127] "%" Vector__XXX
+ SG_ VCU_EBS_SpeedPt4_Tx4_7 : 0|16@1+ (0.125,0) [0|8191.875] "RPM" Vector__XXX
+ SG_ VCU_EBS_PctTorqPt3_Tx4_6 : 0|8@1- (1,0) [-128|127] "%" Vector__XXX
+ SG_ VCU_EBS_SpeedPt3_Tx4_5 : 0|16@1+ (0.125,0) [0|8191.875] "RPM" Vector__XXX
+ SG_ VCU_EBS_PctTorqPt2_Tx4_4 : 0|8@1- (1,0) [-128|127] "%" Vector__XXX
+ SG_ VCU_EBS_SpeedPt2_Tx4_3 : 0|16@1+ (0.125,0) [0|8191.875] "RPM" Vector__XXX
+ SG_ VCU_EBS_PctTorqIdlePt1_Tx4_2 : 0|8@1- (1,0) [-128|127] "%" Vector__XXX
+ SG_ VCU_EBS_SpeedIdlePt1_Tx4_1 : 0|16@1+ (0.125,0) [0|8191.875] "RPM" Vector__XXX
+
+BO_ 858 BMS_Charger_Information_1: 4 CAN2_Secondary_250Kbps
+ SG_ EVSE_Present_Voltage : 16|16@1+ (0.1,0) [0|1000] "V" Vector__XXX
+ SG_ EVSE_Present_Current : 0|16@1+ (0.1,0) [0|500] "A" Vector__XXX
+
+BO_ 859 BMS_Charger_Information_2: 7 CAN2_Secondary_250Kbps
+ SG_ EVSE_Plug_Presence : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ EVSE_Max_Voltage : 0|16@1+ (0.1,0) [0|1000] "V" Vector__XXX
+ SG_ EVSE_Max_Power : 32|16@1+ (1,0) [0|500] "kW" Vector__XXX
+ SG_ EVSE_Max_Current : 16|16@1+ (0.1,0) [0|500] "A" Vector__XXX
+ SG_ EVSE_Charge_type : 49|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2432180126 BMS_Failure_Rx1: 8 CAN2_Secondary_250Kbps
+ SG_ BMS_VCU_TotUndrUFail_Rx1_6 : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_VCU_TotOvrUFail_Rx1_5 : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_VCU_SoCLoFail_Rx1_9 : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_VCU_OnbrdComFail_Rx1_15 : 22|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_VCU_K_Fail_Rx1_10 : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_VCU_IntComFail_Rx1_11 : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_VCU_FbOvrCurFail_Rx1_7 : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_VCU_DchaOvrCurFail_Rx1_8 : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_VCU_ComFail_Rx1_14 : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_VCU_CellUndrUFail_Rx1_4 : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_VCU_CellUDifFail_Rx1_13 : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_VCU_CellOvrUFail_Rx1_3 : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_VCU_BatTDifFail_Rx1_12 : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_VCU_BatInslnFail_Rx1_2 : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_VCU_BatOverTFail_Rx1_1 : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 256 TestRxMsg: 1 CAN3_Diagonistics_500Kbps
+ SG_ TestRxSig : 0|8@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 257 TestTxMsg: 1 CAN3_Diagonistics_500Kbps
+ SG_ TestTxSig : 0|8@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 2632777519 ECAS_BAM_Rx_4: 8 CAN1_Primary_250Kbps
+ SG_ ECAS_VCU_PGNPktgMsg_Rx_4_5 : 40|24@1+ (1,0) [0|16777215] "" Vector__XXX
+ SG_ ECAS_VCU_ResrvdSAE_Rx_4_4 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ECAS_VCU_TotalPackets_Rx_4_3 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ECAS_VCU_TotalNoBytes_Rx_4_2 : 8|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ ECAS_VCU_Ctrl_Rx_4_1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2565603311 EBS_CFG_EM1_Tx4_1: 8 CAN1_Primary_250Kbps
+ SG_ VCU_EBS_byte8_Tx4_8 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_EBS_byte7_Tx4_7 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_EBS_byte6_Tx4_6 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_EBS_byte5_Tx4_5 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_EBS_byte4_Tx4_4 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_EBS_byte3_Tx4_3 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_EBS_byte2_Tx4_2 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_EBS_byte1_Tx4_1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2362584871 ECAS_ASC2_A_Tx1: 5 CAN1_Primary_250Kbps
+ SG_ VCU_ECAS_DampStifReqRrAxl_Tx1_11 : 32|8@1+ (0.4,0) [0|102] "%" Vector__XXX
+ SG_ VCU_ECAS_DampStifReqFrAxl_Tx1_10 : 24|8@1+ (0.4,0) [0|102] "%" Vector__XXX
+ SG_ VCU_ECAS_LiftAxl2PosCmd_Tx1_9 : 22|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_ECAS_LiftAxl1PosCmd_Tx1_8 : 20|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_ECAS_LvlCtrlModReq_Tx1_7 : 16|4@1- (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_ECAS_NomLvlReqRrAxl_Tx1_6 : 12|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ VCU_ECAS_NomLvlReqFrAxl_Tx1_5 : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ VCU_ECAS_KnelCtrlModReq_Tx1_4 : 6|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_ECAS_KnelReqRS_Tx1_3 : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_ECAS_KnelReqLS_Tx1_2 : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_ECAS_AutoTractnHelp_Tx1_1 : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2365479471 ECAS_ASC1_A_Rx3: 1 CAN1_Primary_250Kbps
+ SG_ ECAS_VCU_NomLvlFrAxl_Rx3_1 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ECAS_VCU_NomLvlRrAxl_Rx3_2 : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2632711983 ECAS_DM1MultiPckt_Rx2: 8 CAN1_Primary_250Kbps
+ SG_ ECAS_VCU_byte8_Rx2_8 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ECAS_VCU_byte7_Rx2_7 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ECAS_VCU_byte6_Rx2_6 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ECAS_VCU_byte5_Rx2_5 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ECAS_VCU_byte4_Rx2_4 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ECAS_VCU_byte3_Rx2_3 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ECAS_VCU_SeqNum_Rx2_1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ECAS_VCU_AmbrWarnLamp_Rx2_2 : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566834735 ECAS_DM1SinglePckt_Rx1: 8 CAN1_Primary_250Kbps
+ SG_ ECAS_VCU_byte2_Rx1_2 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ECAS_VCU_byte8_Rx1_8 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ECAS_VCU_byte7_Rx1_7 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ECAS_VCU_byte6_Rx1_6 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ECAS_VCU_byte5_Rx1_5 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ECAS_VCU_byte4_Rx1_4 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ECAS_VCU_byte3_Rx1_3 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ECAS_VCU_AmbrWarnLamp_Rx1_1 : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566801923 EBS_ETC7_Tx9: 2 CAN1_Primary_250Kbps
+ SG_ VCU_EBS_TrnsRdyBrkRel_Tx9_1 : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566856943 EBS_EMRC1_EM1_Tx8: 8 CAN1_Primary_250Kbps
+ SG_ VCU_EBS_ActMaxAvlRetTrq_Tx8_8 : 56|8@1- (1,0) [-128|127] "%" Vector__XXX
+ SG_ VCU_EBS_RetSlctnNonEng_Tx8_7 : 48|8@1+ (0.4,0) [0|102] "%" Vector__XXX
+ SG_ VCU_EBS_SACtrlDevice_Tx8_6 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_EBS_DrvrRetPctTrq_Tx8_5 : 32|8@1- (1,0) [-128|127] "%" Vector__XXX
+ SG_ VCU_EBS_EMotrOutShftSpd_Tx8_4 : 16|16@1+ (0.25,0) [0|16383.75] "RPM" Vector__XXX
+ SG_ VCU_EBS_ActPctTrq_Tx8_3 : 8|8@1- (1,0) [-128|127] "" Vector__XXX
+ SG_ VCU_EBS_ActPctTrqHiRes_Tx8_2 : 4|4@1+ (0.125,0) [0|1.875] "%" Vector__XXX
+ SG_ VCU_EBS_TrqModDrvBrk_Tx8_1 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2364534539 EBS_EMC1_EM1_Rx3: 3 CAN1_Primary_250Kbps
+ SG_ EBS_VCU_ReqTrqLimBrk_Rx3_6 : 16|8@1- (1,0) [-128|127] "%" Vector__XXX
+ SG_ EBS_VCU_ReqTrqLimDrv_Rx3_5 : 8|8@1- (1,0) [-128|127] "%" Vector__XXX
+ SG_ EBS_VCU_OvrCtrlModPriorBrk_Rx3_4 : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ EBS_VCU_OvrCtrlModBrk_Rx3_3 : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ EBS_VCU_OvrCtrlModPriorDrv_Rx3_2 : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ EBS_VCU_OvrCtrlModDrv_Rx3_1 : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566840303 EBS_EEC3_EM1_Tx7: 1 CAN1_Primary_250Kbps
+ SG_ VCU_EBS_NomFrictnPctTrq_Tx7_1 : 0|8@1- (1,0) [-128|127] "%" Vector__XXX
+
+BO_ 2566767627 EBS_EBC5_Rx2: 1 CAN1_Primary_250Kbps
+ SG_ EBS_VCU_HillHoldMode_Rx2_2 : 5|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ EBS_VCU_HaltBrakeMode_Rx2_1 : 2|3@1+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 2565865983 EBS_EBC1_X_Tx6: 8 CAN1_Primary_250Kbps
+ SG_ VCU_EBS_HaltBrakeSw_Tx6_2 : 58|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_EBS_ASRHilHoldSw_Tx6_1 : 20|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2565865739 EBS_EBC1_Rx1: 6 CAN1_Primary_250Kbps
+ SG_ EBS_VCU_AmbrWarnLampABS_Rx1_3 : 44|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ EBS_VCU_RedWarnLamp_Rx1_2 : 42|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ EBS_VCU_BrakeSwitch_Rx1_1 : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566840815 EBS_CFG_EM1_R_Tx5: 8 CAN1_Primary_250Kbps
+ SG_ VCU_EBS_byte8_Tx5_8 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_EBS_byte7_Tx5_7 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_EBS_byte6_Tx5_6 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_EBS_byte5_Tx5_5 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_EBS_byte4_Tx5_4 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_EBS_byte3_Tx5_3 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_EBS_byte2_Tx5_2 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_EBS_byte1_Tx5_1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566841327 EBS_CFG_EM1_E_Tx4: 8 CAN1_Primary_250Kbps
+ SG_ VCU_EBS_byte8_Tx4_8 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_EBS_byte7_Tx4_7 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_EBS_byte6_Tx4_6 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_EBS_byte5_Tx4_5 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_EBS_byte4_Tx4_4 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_EBS_byte3_Tx4_3 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_EBS_byte2_Tx4_2 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_EBS_byte1_Tx4_1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2565668847 EBS_CFG_EM1_BAM_Tx3: 8 CAN1_Primary_250Kbps
+ SG_ VCU_EBS_PGNPktgMsg_Tx_3_5 : 40|24@1+ (1,0) [0|16777215] "" Vector__XXX
+ SG_ VCU_EBS_ResrvdSAE_Tx_3_4 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_EBS_TotalPackets_Tx_3_3 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_EBS_TotalNoBytes_Tx_3_2 : 8|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ VCU_EBS_Ctrl_Tx3_1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566844672 EBS_ECAS_CCVS_Tx_2: 4 CAN1_Primary_250Kbps
+ SG_ VCU_ECAS_BrkSw_Tx2_3 : 28|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_EBS_ECAS_WhlVehSpd_Tx2_2 : 8|16@1+ (0.00390625,0) [0|255.99609375] "km/h" Vector__XXX
+ SG_ VCU_EBS_ParkBrkSw_Tx2_1 : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566827568 EBS_ECAS_AIR1_Tx1: 6 CAN1_Primary_250Kbps
+ SG_ VCU_ECAS_AirSuspSplyPres_Tx1_3 : 40|8@1+ (8,0) [0|2040] "kPa" Vector__XXX
+ SG_ VCU_EBS_SBrkCkt2_AirP_Tx1_2 : 24|8@1+ (8,0) [0|2040] "kPa" Vector__XXX
+ SG_ VCU_EBS_ECAS_SBrkCkt1_AirP_Tx1_1 : 16|8@1+ (8,0) [0|2040] "kPa" Vector__XXX
+
+BO_ 2566900561 HVAC_Status_Rx9: 6 CAN2_Secondary_250Kbps
+ SG_ HVAC_VCU_Invtr2DCkW_Rx9_1 : 0|16@1+ (0.0625,0) [0|4015.9375] "kW" Vector__XXX
+ SG_ HVAC_VCU_Invtr2DCV_Rx9_2 : 16|16@1+ (0.05,0) [0|3212.75] "V" Vector__XXX
+ SG_ HVAC_VCU_Invtr2DCA_Rx9_3 : 32|16@1+ (0.0625,0) [0|4015.9375] "A" Vector__XXX
+
+BO_ 2566899793 HVAC_Status_Rx8: 6 CAN2_Secondary_250Kbps
+ SG_ HVAC_VCU_Invtr1DCA_Rx8_3 : 32|16@1+ (0.0625,0) [0|4015.9375] "A" Vector__XXX
+ SG_ HVAC_VCU_Invtr1DCV_Rx8_2 : 16|16@1+ (0.05,0) [0|3212.75] "V" Vector__XXX
+ SG_ HVAC_VCU_Invtr1DCkW_Rx8_1 : 0|16@1+ (0.0625,0) [0|4015.9375] "kW" Vector__XXX
+
+BO_ 2566852689 HVAC_Status_Rx7: 8 CAN2_Secondary_250Kbps
+ SG_ HVAC_VCU_SPTempFBx_Rx7_7 : 48|8@1+ (1,-40) [-40|210] "deg C" Vector__XXX
+ SG_ HVAC_VCU_FBxHeatng_Rx7_8 : 56|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ HVAC_VCU_FBxFrshArFlap_Rx7_6 : 40|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ HVAC_VCU_FBxFeetDctOpn_Rx7_5 : 32|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ HVAC_VCU_FBxHeadDctOpn_Rx7_4 : 24|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ HVAC_VCU_FBxDfrsDctOpn_Rx7_3 : 16|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ HVAC_VCU_FrntBxBlwSpd_Rx7_2 : 8|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ HVAC_VCU_FrntBxClmtMod_Rx7_1 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2566850385 HVAC_Status_Rx6: 8 CAN2_Secondary_250Kbps
+ SG_ HVAC_VCU_LckdMode_Rx6_27 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_IcngFail_Rx6_26 : 54|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_PTCOvrTmpFail_Rx6_25 : 52|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_LPSysFail_Rx6_24 : 50|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_HPSysFail_Rx6_23 : 48|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_Invtr2Fail_Rx6_22 : 46|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_Invtr1Fail_Rx6_21 : 44|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_Cmpr2FbFail_Rx6_20 : 42|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_Cmpr1FbFail_Rx6_19 : 40|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_HVILFail_Rx6_18 : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_UndrHVFail_Rx6_17 : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_UndrLVFail_Rx6_16 : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_Mtr4Er_Rx6_15 : 30|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_Mtr3Er_Rx6_14 : 28|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_Mtr2Er_Rx6_13 : 26|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_Mtr1Er_Rx6_12 : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_HVILSensEr_Rx6_11 : 22|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_CO2SensEr_Rx6_10 : 20|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_LPresSensEr_Rx6_9 : 18|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_HPresSensEr_Rx6_8 : 16|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_IcngSensEr_Rx6_7 : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_RoomTempSensEr_Rx6_6 : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_DctTempSensEr_Rx6_5 : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_AmbTempSensEr_Rx6_4 : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_CANEr_Rx6_3 : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_TypeEr_Rx6_2 : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_AppAdrsEr_Rx6_1 : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566849361 HVAC_Status_Rx5: 8 CAN2_Secondary_250Kbps
+ SG_ HVAC_VCU_RadialBlowA_Rx5_4 : 48|16@1+ (0.0625,0) [0|4015.9375] "A" Vector__XXX
+ SG_ HVAC_VCU_RadialBlowV_Rx5_3 : 32|16@1+ (0.05,0) [0|3212.75] "V" Vector__XXX
+ SG_ HVAC_VCU_AxlFanA_Rx5_2 : 16|16@1+ (0.0625,0) [0|4015.9375] "A" Vector__XXX
+ SG_ HVAC_VCU_AxlFanV_Rx5_1 : 0|16@1+ (0.05,0) [0|3212.75] "V" Vector__XXX
+
+BO_ 2566849105 HVAC_Status_Rx4: 8 CAN2_Secondary_250Kbps
+ SG_ HVAC_VCU_PTC2A_Rx4_4 : 48|16@1+ (0.0625,0) [0|4015.9375] "A" Vector__XXX
+ SG_ HVAC_VCU_PTC2V_Rx4_3 : 32|16@1+ (0.05,0) [0|3212.75] "V" Vector__XXX
+ SG_ HVAC_VCU_PTC1A_Rx4_2 : 16|16@1+ (0.0625,0) [0|4015.9375] "A" Vector__XXX
+ SG_ HVAC_VCU_PTC1V_Rx4_1 : 0|16@1+ (0.05,0) [0|3212.75] "V" Vector__XXX
+
+BO_ 2566850129 HVAC_Status_Rx3: 8 CAN2_Secondary_250Kbps
+ SG_ HVAC_VCU_SPClntHeatr_Rx3_17 : 56|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ HVAC_VCU_AirCurtn4_Rx3_16 : 54|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_AirCurtn3_Rx3_15 : 52|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_AirCurtn2_Rx3_14 : 50|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_AirCurtn1_Rx3_13 : 48|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_AuxAltrntr_Rx3_12 : 46|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_BypassVlv_Rx3_11 : 44|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_SwtchVlv_Rx3_10 : 42|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_RefrigVlve_Rx3_9 : 40|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_CmpsrUnld4_Rx3_8 : 38|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_CmpsrUnld3_Rx3_7 : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_CmpsrUnld2_Rx3_6 : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_CmpsrUnld1_Rx3_5 : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_SPFlrHeatr_Rx3_4 : 24|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ HVAC_VCU_SPPump_Rx3_3 : 16|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ HVAC_VCU_SPPTC2_Rx3_2 : 8|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ HVAC_VCU_SPPTC1_Rx3_1 : 0|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+
+BO_ 2566849873 HVAC_Status_Rx2: 8 CAN2_Secondary_250Kbps
+ SG_ HVAC_VCU_SPValve2_Rx2_8 : 56|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ HVAC_VCU_SPValve1_Rx2_7 : 48|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ HVAC_VCU_SPFlap2_Rx2_6 : 40|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ HVAC_VCU_SPFlap1_Rx2_5 : 32|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ HVAC_VCU_SPRadialBlwr_Rx2_4 : 24|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ HVAC_VCU_SPAxlFan_Rx2_3 : 16|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ HVAC_VCU_SPComp2_Rx2_2 : 8|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ HVAC_VCU_SPComp1_Rx2_1 : 0|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+
+BO_ 2566848849 HVAC_Status_Rx1: 8 CAN2_Secondary_250Kbps
+ SG_ HVAC_VCU_RTUType_Rx1_15 : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ HVAC_VCU_RefrigType_Rx1_14 : 56|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ HVAC_VCU_Power_Rx1_13 : 40|16@1+ (2,0) [0|128510] "W" Vector__XXX
+ SG_ HVAC_VCU_ClmtSubMod_Rx1_12 : 36|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ HVAC_VCU_ActlClmtMod_Rx1_11 : 32|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ HVAC_VCU_HGasDIceAvl_Rx1_10 : 28|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_ReheatAvl_Rx1_9 : 26|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_VentFAirAvl_Rx1_8 : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_ClngCmpsrAvl_Rx1_7 : 22|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_HeatingClntAvl_Rx1_6 : 20|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_HeatingPTCAvl_Rx1_5 : 18|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_HeatingHeatPmpAvl_Rx1_4 : 16|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_ActlTempSP_Rx1_3 : 8|8@1+ (1,-40) [-40|210] "C" Vector__XXX
+ SG_ HVAC_VCU_SLIStatus_Rx1_2 : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVAC_VCU_HVStatus_Rx1_1 : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2582598096 HVAC_Control_Tx3: 6 CAN2_Secondary_250Kbps
+ SG_ VCU_HVAC_PwrLmtLV_Tx6_3 : 32|16@1+ (2,0) [0|128510] "W" Vector__XXX
+ SG_ VCU_HVAC_PwrLmtHV_Tx6_2 : 16|16@1+ (2,0) [0|128510] "W" Vector__XXX
+ SG_ VCU_HVAC_PwrLmtSys_Tx6_1 : 0|16@1+ (2,0) [0|128510] "W" Vector__XXX
+
+BO_ 2565820880 HVAC_Control_Tx2: 2 CAN2_Secondary_250Kbps
+ SG_ VCU_HVAC_FreshAir_Tx5_3 : 8|8@1+ (0.4,0) [0|100] "" Vector__XXX
+ SG_ VCU_HVAC_EnergyMod_Tx5_2 : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ VCU_HVAC_ClimateMod_Tx5_1 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2564837840 HVAC_Control_Tx1: 7 CAN2_Secondary_250Kbps
+ SG_ VCU_HVAC_HeatrModeReq_Tx4_4 : 48|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ VCU_HVAC_HeatrClntPumpReq_Tx4_3 : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_HVAC_SPRoomTemp_Tx4_2 : 8|16@1+ (0.03125,-273) [-273|1735] "C" Vector__XXX
+ SG_ VCU_HVAC_FanSpd_Tx4_1 : 0|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+
+BO_ 2566775248 HVAC_Input_Tx3: 3 CAN2_Secondary_250Kbps
+ SG_ VCU_HVAC_Door4Opn_Tx3_4 : 20|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_HVAC_Door3Opn_Tx3_3 : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_HVAC_Door2Opn_Tx3_2 : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_HVAC_Door1Opn_Tx3_1 : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566774992 HVAC_Input_Tx2: 8 CAN2_Secondary_250Kbps
+ SG_ VCU_HVAC_BaroAbsPres_Tx2_5 : 48|16@1+ (0.1,0) [0|6425.5] "kPa" Vector__XXX
+ SG_ VCU_HVAC_CalAmbAirTemp_Tx2_4 : 32|16@1+ (0.03125,-273) [-273|1735] "deg C" Vector__XXX
+ SG_ VCU_HVAC_SHumidity_Tx2_3 : 16|16@1+ (0.01,0) [0|642.55] "g/kg" Vector__XXX
+ SG_ VCU_HVAC_SolarSensMax_Tx2_2 : 8|8@1+ (0.4,0) [0|100] "mW/cm3" Vector__XXX
+ SG_ VCU_HVAC_SolarInt_Tx2_1 : 0|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+
+BO_ 2566845904 HVAC_Input_Tx1: 5 CAN2_Secondary_250Kbps
+ SG_ VCU_HVAC_AmbTemp_Tx1_3 : 24|16@1+ (0.03125,-273) [-273|1735] "deg C" Vector__XXX
+ SG_ VCU_HVAC_IntTemp_Tx1_2 : 8|16@1+ (0.03125,-273) [-273|1735] "deg C" Vector__XXX
+ SG_ VCU_HVAC_BaroPres_Tx1_1 : 0|8@1+ (0.5,0) [0|125] "kPa" Vector__XXX
+
+BO_ 2297561248 EHPS_Status_Rx1: 8 CAN2_Secondary_250Kbps
+ SG_ EHPS_VCU_ErrorCode_Rx1_5 : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ EHPS_VCU_Current_Rx1_4 : 40|8@1+ (1,0) [0|255] "A" Vector__XXX
+ SG_ EHPS_VCU_Temp_Rx1_3 : 32|8@1+ (1,0) [0|255] "C" Vector__XXX
+ SG_ EHPS_VCU_ActualRPM_Rx1_2 : 16|16@1+ (1,0) [0|65535] "RPM" Vector__XXX
+ SG_ EHPS_VCU_TargetRPM_Rx1_1 : 0|16@1+ (1,0) [0|65535] "RPM" Vector__XXX
+
+BO_ 2551423143 EHPS_Control_Tx1: 8 CAN2_Secondary_250Kbps
+ SG_ VCU_EHPS_CarSpeed_Tx1_3 : 40|8@1+ (1,-50) [-50|205] "Kmph" Vector__XXX
+ SG_ VCU_EHPS_Gear_Tx1_2 : 12|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ VCU_EHPS_KeyPos_Tx1_1 : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2551244277 DCDC_Status_Rx1: 8 CAN2_Secondary_250Kbps
+ SG_ DCDC_VCU_ShellTemp_Rx1_14 : 56|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ DCDC_VCU_WorkStatus_Rx1_13 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DCDC_VCU_OutV_Rx1_12 : 40|8@1+ (0.2,0) [0|51] "" Vector__XXX
+ SG_ DCDC_VCU_OutA_Rx1_11 : 24|16@1+ (0.1,0) [0|6553.5] "" Vector__XXX
+ SG_ DCDC_VCU_CommFault_Rx1_10 : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_VCU_InternalFault_Rx1_9 : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_VCU_OutShortProtect_Rx1_8 : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_VCU_InUnderV_Rx1_7 : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_VCU_InOverV_Rx1_6 : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_VCU_OutUnderV_Rx1_5 : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_VCU_OutOverV_Rx1_4 : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_VCU_OutOverA_Rx1_3 : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_VCU_OverTempShut_Rx1_2 : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_VCU_Reserve_Rx1_1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2551248357 DCDC_Control_Tx1: 8 CAN2_Secondary_250Kbps
+ SG_ VCU_DCDC_SetA_Tx1_4 : 32|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+ SG_ VCU_DCDC_SetV_Tx1_3 : 16|16@1+ (0.1,0) [0|6553.5] "V" Vector__XXX
+ SG_ VCU_DCDC_Power_Tx1_2 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_DCDC_Reserve_Tx1_1 : 0|8@1- (1,0) [-128|127] "" Vector__XXX
+
+BO_ 2550321636 AirComp_Status_Rx2: 8 CAN2_Secondary_250Kbps
+ SG_ AirComp_VCU_Heartbeat_Rx2_13 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ AirComp_VCU_Reserve_Rx2_12 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ AirComp_VCU_ModuleProtect_Rx2_11 : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AirComp_VCU_Speeding_Rx2_10 : 46|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AirComp_VCU_CommTimeout_Rx2_9 : 45|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AirComp_VCU_Overheat_Rx2_8 : 44|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AirComp_VCU_Overheat_Rx2_7 : 43|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AirComp_VCU_MissingPhase_Rx2_6 : 42|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AirComp_VCU_InputOverV_Rx2_5 : 41|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AirComp_VCU_InputUnderV_Rx2_4 : 40|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AirComp_VCU_Alarm_Rx2_3 : 32|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ AirComp_VCU_MotorTemp_Rx2_2 : 16|16@1+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ AirComp_VCU_MotorRPM_Rx2_1 : 0|16@1+ (1,0) [0|65535] "RPM" Vector__XXX
+
+BO_ 2550256100 AirComp_Status_Rx1: 8 CAN2_Secondary_250Kbps
+ SG_ AirComp_VCU_Status_Rx1_4 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ AirComp_VCU_OutputV_Rx1_2 : 16|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ AirComp_VCU_OutputA_Rx1_3 : 32|16@1+ (0.1,0) [0|6553.5] "" Vector__XXX
+ SG_ AirComp_VCU_InputV_Rx1_1 : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ AirComp_VCU_Heartbeat_Rx1_5 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2364539778 ACP_Status_Rx1: 8 CAN2_Secondary_250Kbps
+ SG_ ACP_VCU_Position_Rx1_3 : 8|8@1+ (0.4,0) [0|102] "" Vector__XXX
+ SG_ ACP_VCU_LowIdle_Rx1_1 : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ACP_VCU_Kickdown_Rx1_2 : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2349574128 MCU_Status_Rx3: 8 CAN1_Primary_250Kbps
+ SG_ MCU_VCU_MotorStall_Rx3_15 : 43|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_VCU_MotorOverRPM_Rx3_14 : 42|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_VCU_MotorTempWarn_Rx3_13 : 41|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_VCU_MotorOverTemp_Rx3_12 : 40|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_VCU_ControlTempWarn_Rx3_11 : 39|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_VCU_ControlOverTemp_Rx3_10 : 38|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_VCU_CInverterFail_Rx3_9 : 37|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_VCU_ControlOverflowAC_Rx3_8 : 36|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_VCU_ControlUnderVDC_Rx3_7 : 35|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_VCU_ControlOverVDC_Rx3_6 : 34|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_VCU_MainKFail_Rx3_5 : 33|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_VCU_PreChargeKFail_Rx3_4 : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_VCU_MotorPeakNm_Rx3_3 : 16|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ MCU_VCU_MotorMaxRPM_Rx3_2 : 8|8@1+ (100,0) [0|25500] "RPM" Vector__XXX
+ SG_ MCU_VCU_MotorPeakW_Rx3_1 : 0|8@1+ (1,0) [0|255] "kW" Vector__XXX
+
+BO_ 2349508592 MCU_SoftwareVer_Rx1: 8 CAN1_Primary_250Kbps
+ SG_ MCU_VCU_SubVer_Rx1_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_VCU_MainVer_Rx1_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_VCU_AddInfo_Rx1_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_VCU_MotorVer_Rx1_4 : 24|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_VCU_ControllerVer_Rx1_3 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_VCU_ControllerType_Rx1_2 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ MCU_VCU_Reserved_Rx1_1 : 0|8@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 2349443056 MCU_Status_Rx2: 8 CAN1_Primary_250Kbps
+ SG_ MCU_VCU_CloseAuxK_Rx2_6 : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_VCU_CloseMainK_Rx2_5 : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_VCU_Fault_Rx2_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_VCU_RecitfiedA_Rx2_4 : 32|16@1- (0.1,-10000) [-13276.8|-6723.3] "A" Vector__XXX
+ SG_ MCU_VCU_TempMCU_Rx2_3 : 24|8@1- (1,-40) [-168|87] "C" Vector__XXX
+ SG_ MCU_VCU_MotorTemp_Rx2_2 : 16|8@1- (1,-40) [-168|87] "C" Vector__XXX
+ SG_ MCU_VCU_TotalV_Rx2_1 : 0|16@1- (0.1,-10000) [-13276.8|-6723.3] "V" Vector__XXX
+
+BO_ 2349377520 MCU_Status_Rx1: 8 CAN1_Primary_250Kbps
+ SG_ MCU_VCU_Ready_Rx1_11 : 55|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_VCU_OperateMode_Rx1_9 : 53|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_VCU_Halt_Rx1_4 : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_VCU_Forward_Rx1_8 : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_VCU_Drive_Rx1_5 : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_VCU_DisconnectHV_Rx1_10 : 54|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_VCU_Brake_Rx1_6 : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_VCU_Backwards_Rx1_7 : 51|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_VCU_LifeMCU_Rx1_12 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ MCU_VCU_InputA_Rx1_3 : 32|16@1- (0.1,-10000) [-13276.8|-6723.3] "A" Vector__XXX
+ SG_ MCU_VCU_Speed_Rx1_2 : 16|16@1- (0.5,0) [-16384|16383.5] "RPM" Vector__XXX
+ SG_ MCU_VCU_Torque_Rx1_1 : 0|16@1- (1,-32000) [-64768|767] "Nm" Vector__XXX
+
+BO_ 2350510247 MCU_Control_Tx1: 8 CAN1_Primary_250Kbps
+ SG_ VCU_MCU_Ready_Tx1_11 : 55|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_MCU_DisconnectHV_Tx1_10 : 54|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_MCU_OperateMode_Tx1_9 : 53|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_MCU_Forward_Tx1_8 : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_MCU_Backwards_Tx1_7 : 51|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_MCU_Brake_Tx1_6 : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_MCU_Drive_Tx1_5 : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_MCU_Halt_Tx1_4 : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_MCU_LifeVCU_Tx1_12 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_MCU_CurrentLimit_Tx1_3 : 32|16@1- (0.1,-10000) [-13276.8|-6723.3] "A" Vector__XXX
+ SG_ VCU_MCU_VoltageLimit_Tx1_2 : 16|16@1- (0.1,-10000) [-13276.8|-6723.3] "V" Vector__XXX
+ SG_ VCU_MCU_TorqueSetpoint_Tx1_1 : 0|16@1- (0.5,0) [0|0] "Nm" Vector__XXX
+
+BO_ 274 BMS_Information_2: 8 CAN2_Secondary_250Kbps
+ SG_ BatteryChargeVoltageMaximum : 23|16@0+ (0.1,0) [0|1000] "V" Vector__XXX
+ SG_ BatteryChargeCurrentMaximum : 7|16@0+ (0.1,0) [0|500] "A" Vector__XXX
+ SG_ Battery_Cell_Max_Temperature : 63|8@0+ (1,-40) [-40|215] "°C" Vector__XXX
+ SG_ Battery_Average_Cell_Temperature : 47|8@0+ (1,-40) [-40|215] "°C" Vector__XXX
+ SG_ Battery_Min_Cell_Temperature : 55|8@0+ (1,-40) [-40|215] "°C" Vector__XXX
+
+BO_ 278 BMS_Status: 5 CAN2_Secondary_250Kbps
+ SG_ Batt_External_Insul_Test_Status : 39|3@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Batt_Power_Distribution_Status : 31|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Battery_Keep_Active_Request : 1|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Battery_Operating_Status : 6|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Confirm_Inhib_Mes_Isol : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Battery_State_Of_Health : 23|8@0+ (0.5,0) [0|100] "%" Vector__XXX
+ SG_ Battery_State_Of_Charge : 15|8@0+ (0.5,0) [0|100] "%" Vector__XXX
+ SG_ Battery_State : 4|3@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Batt_Internal_Insul_Test_Status : 28|3@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 273 BMS_Information_1: 8 CAN2_Secondary_250Kbps
+ SG_ Count_Related_To_Information_1 : 59|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Battery_Voltage : 7|10@0+ (1,0) [0|0] "V" Vector__XXX
+ SG_ Battery_Max_Discharge_Current : 37|10@0+ (2,0) [0|1000] "A" Vector__XXX
+ SG_ Battery_Max_Charge_Current : 31|10@0+ (2,0) [0|1000] "A" Vector__XXX
+ SG_ Battery_Current : 13|14@0+ (0.5,-1000) [-1000|1000] "A" Vector__XXX
+
+BO_ 272 BMS_Charge_Management: 6 CAN2_Secondary_250Kbps
+ SG_ RemainingTimeToFullSOC : 39|16@0+ (1,0) [0|8000] "min" Vector__XXX
+ SG_ Battery_charge_voltage_setpoint : 7|14@0+ (1,0) [0|0] "V" Vector__XXX
+ SG_ Count_Related_To_Battery_Charge : 27|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Battery_Equalization_Status : 29|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Battery_Charge_Current_Setpoint : 9|10@0+ (0.5,0) [0|500] "A" Vector__XXX
+ SG_ Battery_Charge_Completed : 28|1@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1025 BMS_System_Information: 6 CAN2_Secondary_250Kbps
+ SG_ Count_Battery_State_Request : 43|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger_Available_Power : 39|8@0+ (500,0) [0|127500] "W" Vector__XXX
+ SG_ Battery_State_Request : 2|3@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Battery_Inte_InsulationTestCtrl : 9|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Battery_Ext_Insulation_Test_Ctrl : 11|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Ambient_Temperature : 31|8@0+ (1,-40) [-40|215] "°C" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 3221225472 VCU_EBS_DefaultTrqLt_Tx4_22 "Doubt in Unit
+";
+CM_ SG_ 2349443056 MCU_VCU_Fault_Rx2_7 "0 - Normal
+1-99 - Fault";
+CM_ SG_ 2350510247 VCU_MCU_TorqueSetpoint_Tx1_1 "Assuming we are controlling by torque
+";
+BA_DEF_ SG_  "Utilisation_signal" ENUM  "Used","Obsolete","Not Used","???";
+BA_DEF_ BO_  "Utilisation_msg" ENUM  "Used","Obsolete","Not Used","???";
+BA_DEF_ BU_  "NmStationAddress" HEX 0 255;
+BA_DEF_  "Manufacturer" STRING ;
+BA_DEF_ BU_  "ILUsed" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigStartValue" INT 0 16777215;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 16777215;
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "P","E","P+E","EM";
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 2000;
+BA_DEF_ BO_  "tapas_period_ms" INT 0 0;
+BA_DEF_ BO_  "tapas_jitter_ms" INT 0 0;
+BA_DEF_ BU_  "tapas_channel_id" INT 0 0;
+BA_DEF_ BU_  "tapas_baudrate_kbps" INT 0 0;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "Utilisation_signal" "Used";
+BA_DEF_DEF_  "Utilisation_msg" "Used";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "Manufacturer" "actia";
+BA_DEF_DEF_  "ILUsed" "Yes";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "P";
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgCycleTime" 100;
+BA_DEF_DEF_  "tapas_period_ms" 0;
+BA_DEF_DEF_  "tapas_jitter_ms" 0;
+BA_DEF_DEF_  "tapas_channel_id" 0;
+BA_DEF_DEF_  "tapas_baudrate_kbps" 0;
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "tapas_baudrate_kbps" BU_ CAN3_Diagonistics_500Kbps 250;
+BA_ "tapas_channel_id" BU_ CAN3_Diagonistics_500Kbps 3;
+BA_ "tapas_baudrate_kbps" BU_ CAN2_Secondary_250Kbps 250;
+BA_ "tapas_channel_id" BU_ CAN2_Secondary_250Kbps 2;
+BA_ "tapas_baudrate_kbps" BU_ CAN1_Primary_250Kbps 250;
+BA_ "tapas_channel_id" BU_ CAN1_Primary_250Kbps 1;
+BA_ "tapas_period_ms" BO_ 858 100;
+BA_ "tapas_jitter_ms" BO_ 858 20;
+BA_ "tapas_period_ms" BO_ 859 100;
+BA_ "tapas_jitter_ms" BO_ 859 20;
+BA_ "tapas_period_ms" BO_ 2432180126 100;
+BA_ "tapas_jitter_ms" BO_ 2432180126 20;
+BA_ "tapas_period_ms" BO_ 256 1000;
+BA_ "tapas_jitter_ms" BO_ 256 0;
+BA_ "tapas_period_ms" BO_ 257 1000;
+BA_ "tapas_jitter_ms" BO_ 257 0;
+BA_ "tapas_jitter_ms" BO_ 2632777519 20;
+BA_ "tapas_period_ms" BO_ 2632777519 100;
+BA_ "tapas_jitter_ms" BO_ 2565603311 20;
+BA_ "tapas_period_ms" BO_ 2565603311 5000;
+BA_ "tapas_period_ms" BO_ 2362584871 100;
+BA_ "tapas_jitter_ms" BO_ 2362584871 20;
+BA_ "tapas_period_ms" BO_ 2365479471 100;
+BA_ "tapas_jitter_ms" BO_ 2365479471 20;
+BA_ "tapas_period_ms" BO_ 2632711983 100;
+BA_ "tapas_jitter_ms" BO_ 2632711983 20;
+BA_ "tapas_period_ms" BO_ 2566834735 100;
+BA_ "tapas_jitter_ms" BO_ 2566834735 20;
+BA_ "tapas_jitter_ms" BO_ 2566801923 20;
+BA_ "tapas_period_ms" BO_ 2566801923 100;
+BA_ "tapas_jitter_ms" BO_ 2566856943 1;
+BA_ "tapas_period_ms" BO_ 2566856943 10;
+BA_ "tapas_jitter_ms" BO_ 2364534539 10;
+BA_ "tapas_period_ms" BO_ 2364534539 100;
+BA_ "tapas_jitter_ms" BO_ 2566840303 20;
+BA_ "tapas_period_ms" BO_ 2566840303 250;
+BA_ "tapas_jitter_ms" BO_ 2566767627 20;
+BA_ "tapas_period_ms" BO_ 2566767627 100;
+BA_ "tapas_jitter_ms" BO_ 2565865983 20;
+BA_ "tapas_period_ms" BO_ 2565865983 100;
+BA_ "tapas_jitter_ms" BO_ 2565865739 20;
+BA_ "tapas_period_ms" BO_ 2565865739 100;
+BA_ "tapas_jitter_ms" BO_ 2566840815 20;
+BA_ "tapas_period_ms" BO_ 2566840815 5000;
+BA_ "tapas_jitter_ms" BO_ 2566841327 20;
+BA_ "tapas_period_ms" BO_ 2566841327 5000;
+BA_ "tapas_jitter_ms" BO_ 2565668847 20;
+BA_ "tapas_period_ms" BO_ 2565668847 5000;
+BA_ "tapas_jitter_ms" BO_ 2566844672 20;
+BA_ "tapas_period_ms" BO_ 2566844672 100;
+BA_ "tapas_jitter_ms" BO_ 2566827568 20;
+BA_ "tapas_period_ms" BO_ 2566827568 1000;
+BA_ "tapas_period_ms" BO_ 2566900561 100;
+BA_ "tapas_jitter_ms" BO_ 2566900561 20;
+BA_ "tapas_period_ms" BO_ 2566899793 100;
+BA_ "tapas_jitter_ms" BO_ 2566899793 20;
+BA_ "tapas_period_ms" BO_ 2566852689 100;
+BA_ "tapas_jitter_ms" BO_ 2566852689 20;
+BA_ "tapas_period_ms" BO_ 2566850385 100;
+BA_ "tapas_jitter_ms" BO_ 2566850385 20;
+BA_ "tapas_period_ms" BO_ 2566849361 100;
+BA_ "tapas_jitter_ms" BO_ 2566849361 20;
+BA_ "tapas_period_ms" BO_ 2566849105 100;
+BA_ "tapas_jitter_ms" BO_ 2566849105 20;
+BA_ "tapas_period_ms" BO_ 2566850129 100;
+BA_ "tapas_jitter_ms" BO_ 2566850129 20;
+BA_ "tapas_period_ms" BO_ 2566849873 100;
+BA_ "tapas_jitter_ms" BO_ 2566849873 20;
+BA_ "tapas_period_ms" BO_ 2566848849 100;
+BA_ "tapas_jitter_ms" BO_ 2566848849 20;
+BA_ "tapas_period_ms" BO_ 2582598096 100;
+BA_ "tapas_jitter_ms" BO_ 2582598096 20;
+BA_ "tapas_period_ms" BO_ 2565820880 100;
+BA_ "tapas_jitter_ms" BO_ 2565820880 20;
+BA_ "tapas_period_ms" BO_ 2564837840 100;
+BA_ "tapas_jitter_ms" BO_ 2564837840 20;
+BA_ "tapas_period_ms" BO_ 2566775248 100;
+BA_ "tapas_jitter_ms" BO_ 2566775248 20;
+BA_ "tapas_period_ms" BO_ 2566774992 100;
+BA_ "tapas_jitter_ms" BO_ 2566774992 20;
+BA_ "tapas_period_ms" BO_ 2566845904 100;
+BA_ "tapas_jitter_ms" BO_ 2566845904 20;
+BA_ "tapas_period_ms" BO_ 2297561248 100;
+BA_ "tapas_jitter_ms" BO_ 2297561248 20;
+BA_ "tapas_period_ms" BO_ 2551423143 100;
+BA_ "tapas_jitter_ms" BO_ 2551423143 20;
+BA_ "tapas_period_ms" BO_ 2551244277 100;
+BA_ "tapas_jitter_ms" BO_ 2551244277 20;
+BA_ "tapas_period_ms" BO_ 2551248357 100;
+BA_ "tapas_jitter_ms" BO_ 2551248357 20;
+BA_ "tapas_period_ms" BO_ 2550321636 100;
+BA_ "tapas_jitter_ms" BO_ 2550321636 20;
+BA_ "tapas_period_ms" BO_ 2550256100 100;
+BA_ "tapas_jitter_ms" BO_ 2550256100 20;
+BA_ "tapas_period_ms" BO_ 2364539778 100;
+BA_ "tapas_jitter_ms" BO_ 2364539778 20;
+BA_ "tapas_period_ms" BO_ 2349574128 100;
+BA_ "tapas_jitter_ms" BO_ 2349574128 20;
+BA_ "tapas_period_ms" BO_ 2349508592 100;
+BA_ "tapas_jitter_ms" BO_ 2349508592 20;
+BA_ "tapas_period_ms" BO_ 2349443056 100;
+BA_ "tapas_jitter_ms" BO_ 2349443056 20;
+BA_ "tapas_period_ms" BO_ 2349377520 100;
+BA_ "tapas_jitter_ms" BO_ 2349377520 20;
+BA_ "tapas_period_ms" BO_ 2350510247 100;
+BA_ "tapas_jitter_ms" BO_ 2350510247 20;
+BA_ "tapas_period_ms" BO_ 274 100;
+BA_ "tapas_jitter_ms" BO_ 274 20;
+BA_ "tapas_period_ms" BO_ 278 100;
+BA_ "tapas_jitter_ms" BO_ 278 20;
+BA_ "tapas_period_ms" BO_ 273 100;
+BA_ "tapas_jitter_ms" BO_ 273 20;
+BA_ "tapas_period_ms" BO_ 272 100;
+BA_ "tapas_jitter_ms" BO_ 272 20;
+BA_ "tapas_period_ms" BO_ 1025 100;
+BA_ "tapas_jitter_ms" BO_ 1025 20;
+BA_ "GenMsgStartDelayTime" BO_ 1025 0;
+BA_ "GenSigStartValue" SG_ 274 Battery_Cell_Max_Temperature 40;
+BA_ "GenSigStartValue" SG_ 274 Battery_Average_Cell_Temperature 40;
+BA_ "GenSigStartValue" SG_ 274 Battery_Min_Cell_Temperature 40;
+BA_ "GenSigStartValue" SG_ 273 Battery_Current 2000;
+BA_ "GenSigStartValue" SG_ 1025 Ambient_Temperature 65;
+VAL_ 859 EVSE_Charge_type 3 "undefined" 2 "charge by pantograph" 1 "charge by plug CCS2" 0 "no charge" ;
+VAL_ 2362584871 VCU_ECAS_LiftAxl2PosCmd_Tx1_9 1 "up / tag axle unladen;" 0 "down/tag axle laden" ;
+VAL_ 2362584871 VCU_ECAS_LiftAxl1PosCmd_Tx1_8 1 "up / tag axle unladen;" 0 "down/tag axle laden" ;
+VAL_ 2362584871 VCU_ECAS_LvlCtrlModReq_Tx1_7 8 "Exhaust bellows" 7 "Traction help (Load reduce)" 6 "Optimum Traction 2" 5 "Optimum Traction 1" 4 "Pressure ratio 2" 3 "Pressure ratio 1" 2 "Load fixing" 1 "Traction help (load transfer)" 0 "Normal operation" ;
+VAL_ 2362584871 VCU_ECAS_NomLvlReqRrAxl_Tx1_6 8 "Stop level change" 7 "Lower Level" 6 "Upper Level" 5 "Customer Level" 4 "Preset Level" 3 "Normal Level 3" 2 "Normal Level 2" 1 "Normal Level 1" 0 "Not specified" ;
+VAL_ 2362584871 VCU_ECAS_NomLvlReqFrAxl_Tx1_5 8 "Stop level change" 7 "Lower Level" 6 "Upper Level" 5 "Customer Level" 4 "Preset Level" 3 "Normal Level 3" 2 "Normal Level 2" 1 "Normal Level 1" 0 "Not specified" ;
+VAL_ 2362584871 VCU_ECAS_KnelCtrlModReq_Tx1_4 1 "Manually Actuated" 0 "Automatically Actuated" ;
+VAL_ 2362584871 VCU_ECAS_KnelReqRS_Tx1_3 0 "No kneeling request" ;
+VAL_ 2362584871 VCU_ECAS_KnelReqLS_Tx1_2 1 "Kneeling Request" 0 "No kneeling request" ;
+VAL_ 2362584871 VCU_ECAS_AutoTractnHelp_Tx1_1 2 "Reserved" 1 "Enable automatic traction help" 0 "Disable automatic traction help" ;
+VAL_ 2365479471 ECAS_VCU_NomLvlFrAxl_Rx3_1 7 "Lower Level" 6 "Upper Level" 5 "Customer Level" 4 "Preset Level" 3 "Normal Level 3" 2 "Normal Level 2" 1 "Normal Level 1" 0 "Not specified" ;
+VAL_ 2365479471 ECAS_VCU_NomLvlRrAxl_Rx3_2 7 "Lower Level" 6 "Upper Level" 5 "Customer Level" 4 "Preset Level" 3 "Normal Level 3" 2 "Normal Level 2" 1 "Normal Level 1" 0 "Not specified" ;
+VAL_ 2632711983 ECAS_VCU_AmbrWarnLamp_Rx2_2 2 "Not defined" 1 "Lamp On" 0 "Lamp Off" ;
+VAL_ 2566834735 ECAS_VCU_AmbrWarnLamp_Rx1_1 2 "Not defined" 1 "Lamp On" 0 "Lamp Off" ;
+VAL_ 2566852689 HVAC_VCU_FrntBxClmtMod_Rx7_1 15 "Dont care" 13 "Auto" 6 "Defrost" 5 "Reheat" 4 "Ventilation" 3 "Cooling" 2 "Heating" 1 "Idle" 0 "Off" ;
+VAL_ 2566850385 HVAC_VCU_LckdMode_Rx6_27 3 "Not valid" 2 "Not used" 1 "Active" 0 "Inactive" ;
+VAL_ 2566850385 HVAC_VCU_IcngFail_Rx6_26 3 "Not valid" 2 "Not used" 1 "Active" 0 "Inactive" ;
+VAL_ 2566850385 HVAC_VCU_PTCOvrTmpFail_Rx6_25 3 "Not valid" 2 "Not used" 1 "Active" 0 "Inactive" ;
+VAL_ 2566850385 HVAC_VCU_LPSysFail_Rx6_24 3 "Not valid" 2 "Not used" 1 "Active" 0 "Inactive" ;
+VAL_ 2566850385 HVAC_VCU_HPSysFail_Rx6_23 3 "Not valid" 2 "Not used" 1 "Active" 0 "Inactive" ;
+VAL_ 2566850385 HVAC_VCU_Invtr2Fail_Rx6_22 3 "Not valid" 2 "Not used" 1 "Active" 0 "Inactive" ;
+VAL_ 2566850385 HVAC_VCU_Invtr1Fail_Rx6_21 3 "Not valid" 2 "Not used" 1 "Active" 0 "Inactive" ;
+VAL_ 2566850385 HVAC_VCU_Cmpr2FbFail_Rx6_20 3 "Not valid" 2 "Not used" 1 "Active" 0 "Inactive" ;
+VAL_ 2566850385 HVAC_VCU_Cmpr1FbFail_Rx6_19 3 "Not valid" 2 "Not used" 1 "Active" 0 "Inactive" ;
+VAL_ 2566850385 HVAC_VCU_HVILFail_Rx6_18 3 "Not valid" 2 "Not used" 1 "Active" 0 "Inactive" ;
+VAL_ 2566850385 HVAC_VCU_UndrHVFail_Rx6_17 3 "Not valid" 2 "Not used" 1 "Active" 0 "Inactive" ;
+VAL_ 2566850385 HVAC_VCU_UndrLVFail_Rx6_16 3 "Not valid" 2 "Not used" 1 "Active" 0 "Inactive" ;
+VAL_ 2566850385 HVAC_VCU_Mtr4Er_Rx6_15 3 "Not valid" 2 "Not used" 1 "Active" 0 "Inactive" ;
+VAL_ 2566850385 HVAC_VCU_Mtr3Er_Rx6_14 3 "Not valid" 2 "Not used" 1 "Active" 0 "Inactive" ;
+VAL_ 2566850385 HVAC_VCU_Mtr2Er_Rx6_13 3 "Not valid" 2 "Not used" 1 "Active" 0 "Inactive" ;
+VAL_ 2566850385 HVAC_VCU_Mtr1Er_Rx6_12 3 "Not valid" 2 "Not used" 1 "Active" 0 "Inactive" ;
+VAL_ 2566850385 HVAC_VCU_HVILSensEr_Rx6_11 3 "Not valid" 2 "Not used" 1 "Active" 0 "Inactive" ;
+VAL_ 2566850385 HVAC_VCU_CO2SensEr_Rx6_10 3 "Not valid" 2 "Not used" 1 "Active" 0 "Inactive" ;
+VAL_ 2566850385 HVAC_VCU_LPresSensEr_Rx6_9 3 "Not valid" 2 "Not used" 1 "Active" 0 "Inactive" ;
+VAL_ 2566850385 HVAC_VCU_HPresSensEr_Rx6_8 3 "Not valid" 2 "Not used" 1 "Active" 0 "Inactive" ;
+VAL_ 2566850385 HVAC_VCU_IcngSensEr_Rx6_7 3 "Not valid" 2 "Not used" 1 "Active" 0 "Inactive" ;
+VAL_ 2566850385 HVAC_VCU_RoomTempSensEr_Rx6_6 3 "Not valid" 2 "Not used" 1 "Active" 0 "Inactive" ;
+VAL_ 2566850385 HVAC_VCU_DctTempSensEr_Rx6_5 3 "Not valid" 2 "Not used" 1 "Active" 0 "Inactive" ;
+VAL_ 2566850385 HVAC_VCU_AmbTempSensEr_Rx6_4 3 "Not valid" 2 "Not used" 1 "Active" 0 "Inactive" ;
+VAL_ 2566850385 HVAC_VCU_CANEr_Rx6_3 3 "Not valid" 2 "Not used" 1 "Active" 0 "Inactive" ;
+VAL_ 2566850385 HVAC_VCU_TypeEr_Rx6_2 3 "Not valid" 2 "Not used" 1 "Active" 0 "Inactive" ;
+VAL_ 2566850385 HVAC_VCU_AppAdrsEr_Rx6_1 3 "Not valid" 2 "Not used" 1 "Active" 0 "Inactive" ;
+VAL_ 2566850129 HVAC_VCU_AirCurtn4_Rx3_16 3 "Not valid" 2 "Do not care" 1 "Off" 0 "On" ;
+VAL_ 2566850129 HVAC_VCU_AirCurtn3_Rx3_15 3 "Not valid" 2 "Do not care" 1 "Off" 0 "On" ;
+VAL_ 2566850129 HVAC_VCU_AirCurtn2_Rx3_14 3 "Not valid" 2 "Do not care" 1 "Off" 0 "On" ;
+VAL_ 2566850129 HVAC_VCU_AirCurtn1_Rx3_13 3 "Not valid" 2 "Do not care" 1 "Off" 0 "On" ;
+VAL_ 2566850129 HVAC_VCU_AuxAltrntr_Rx3_12 3 "Void" 2 "Do not care" 1 "Off" 0 "On" ;
+VAL_ 2566850129 HVAC_VCU_BypassVlv_Rx3_11 3 "Not valid" 2 "Do not care" 1 "Open" 0 "Closed" ;
+VAL_ 2566850129 HVAC_VCU_SwtchVlv_Rx3_10 3 "Not valid" 2 "Do not care" 1 "Open" 0 "Closed" ;
+VAL_ 2566850129 HVAC_VCU_RefrigVlve_Rx3_9 3 "Not valid" 2 "Do not care" 1 "Open" 0 "Closed" ;
+VAL_ 2566850129 HVAC_VCU_CmpsrUnld4_Rx3_8 3 "Void" 2 "Do Not Care" 1 "On" 0 "Off" ;
+VAL_ 2566850129 HVAC_VCU_CmpsrUnld3_Rx3_7 3 "Void" 2 "Do Not Care" 1 "On" 0 "Off" ;
+VAL_ 2566850129 HVAC_VCU_CmpsrUnld2_Rx3_6 3 "Void" 2 "Do Not Care" 1 "On" 0 "Off" ;
+VAL_ 2566850129 HVAC_VCU_CmpsrUnld1_Rx3_5 3 "Void" 2 "Do Not Care" 1 "On" 0 "Off" ;
+VAL_ 2551423143 VCU_EHPS_Gear_Tx1_2 10 "D" 5 "R" 1 "P" 0 "N" ;
+VAL_ 2551423143 VCU_EHPS_KeyPos_Tx1_1 3 "Start" 2 "ON" 1 "ACC" 0 "Lock" ;
+VAL_ 2551244277 DCDC_VCU_WorkStatus_Rx1_13 1 "Stop" 0 "Work" ;
+VAL_ 2551244277 DCDC_VCU_CommFault_Rx1_10 1 "Fault" 0 "Normal" ;
+VAL_ 2551244277 DCDC_VCU_InternalFault_Rx1_9 1 "Fault" 0 "Normal" ;
+VAL_ 2551244277 DCDC_VCU_OutShortProtect_Rx1_8 1 "Fault" 0 "Normal" ;
+VAL_ 2551244277 DCDC_VCU_InUnderV_Rx1_7 1 "Fault" 0 "Normal" ;
+VAL_ 2551244277 DCDC_VCU_InOverV_Rx1_6 1 "Fault" 0 "Normal" ;
+VAL_ 2551244277 DCDC_VCU_OutUnderV_Rx1_5 1 "Fault" 0 "Normal" ;
+VAL_ 2551244277 DCDC_VCU_OutOverV_Rx1_4 1 "Fault" 0 "Normal" ;
+VAL_ 2551244277 DCDC_VCU_OutOverA_Rx1_3 1 "Fault" 0 "Normal" ;
+VAL_ 2551244277 DCDC_VCU_OverTempShut_Rx1_2 1 "Fault" 0 "Normal" ;
+VAL_ 2551248357 VCU_DCDC_Power_Tx1_2 1 "Power ON" 0 "Shutdown" ;
+VAL_ 2550321636 AirComp_VCU_ModuleProtect_Rx2_11 1 "Malfunction" 0 "Normal" ;
+VAL_ 2550321636 AirComp_VCU_Speeding_Rx2_10 1 "Malfunction" 0 "Normal" ;
+VAL_ 2550321636 AirComp_VCU_CommTimeout_Rx2_9 1 "Malfunction" 0 "Normal" ;
+VAL_ 2550321636 AirComp_VCU_Overheat_Rx2_8 1 "Malfunction" 0 "Normal" ;
+VAL_ 2550321636 AirComp_VCU_Overheat_Rx2_7 1 "Malfunction" 0 "Normal" ;
+VAL_ 2550321636 AirComp_VCU_MissingPhase_Rx2_6 1 "Malfunction" 0 "Normal" ;
+VAL_ 2550321636 AirComp_VCU_InputOverV_Rx2_5 1 "Malfunction" 0 "Normal" ;
+VAL_ 2550321636 AirComp_VCU_InputUnderV_Rx2_4 1 "Malfunction" 0 "Normal" ;
+VAL_ 2550256100 AirComp_VCU_Status_Rx1_4 3 "Invalid" 2 "Malfunction" 1 "Working" 0 "Stop" ;
+VAL_ 2364539778 ACP_VCU_LowIdle_Rx1_1 3 "Not available" 2 "Not utilized" 1 "Low idle condition" 0 "Not in low idle condition" ;
+VAL_ 2364539778 ACP_VCU_Kickdown_Rx1_2 3 "Not available" 2 "Not utilized" 1 "Kickdown Active" 0 "Kickdown Passive" ;
+VAL_ 2349574128 MCU_VCU_MotorStall_Rx3_15 1 "Normal" 0 "Fault" ;
+VAL_ 2349574128 MCU_VCU_MotorOverRPM_Rx3_14 1 "Normal" 0 "Fault" ;
+VAL_ 2349574128 MCU_VCU_MotorTempWarn_Rx3_13 1 "Normal" 0 "Fault" ;
+VAL_ 2349574128 MCU_VCU_MotorOverTemp_Rx3_12 1 "Normal" 0 "Fault" ;
+VAL_ 2349574128 MCU_VCU_ControlTempWarn_Rx3_11 1 "Normal" 0 "Fault" ;
+VAL_ 2349574128 MCU_VCU_ControlOverTemp_Rx3_10 1 "Normal" 0 "Fault" ;
+VAL_ 2349574128 MCU_VCU_CInverterFail_Rx3_9 1 "Normal" 0 "Fault" ;
+VAL_ 2349574128 MCU_VCU_ControlOverflowAC_Rx3_8 1 "Normal" 0 "Fault" ;
+VAL_ 2349574128 MCU_VCU_ControlUnderVDC_Rx3_7 1 "Normal" 0 "Fault" ;
+VAL_ 2349574128 MCU_VCU_ControlOverVDC_Rx3_6 1 "Normal" 0 "Fault" ;
+VAL_ 2349574128 MCU_VCU_MainKFail_Rx3_5 1 "Normal" 0 "Fault" ;
+VAL_ 2349574128 MCU_VCU_PreChargeKFail_Rx3_4 1 "Normal" 0 "Fault" ;
+VAL_ 2349443056 MCU_VCU_CloseAuxK_Rx2_6 1 "Close" 0 "Open" ;
+VAL_ 2349443056 MCU_VCU_CloseMainK_Rx2_5 1 "Close" 0 "Open" ;
+VAL_ 2349443056 MCU_VCU_Fault_Rx2_7 0 "Normal" ;
+VAL_ 2349377520 MCU_VCU_Ready_Rx1_11 1 "Normal" 0 "Fault" ;
+VAL_ 2349377520 MCU_VCU_OperateMode_Rx1_9 1 "Speed" 0 "Torque" ;
+VAL_ 2349377520 MCU_VCU_Halt_Rx1_4 1 "Normal" 0 "Fault" ;
+VAL_ 2349377520 MCU_VCU_Forward_Rx1_8 1 "Normal" 0 "Fault" ;
+VAL_ 2349377520 MCU_VCU_Drive_Rx1_5 1 "Normal" 0 "Fault" ;
+VAL_ 2349377520 MCU_VCU_DisconnectHV_Rx1_10 1 "Normal" 0 "Fault" ;
+VAL_ 2349377520 MCU_VCU_Brake_Rx1_6 1 "Normal" 0 "Fault" ;
+VAL_ 2349377520 MCU_VCU_Backwards_Rx1_7 1 "Normal" 0 "Fault" ;
+VAL_ 2350510247 VCU_MCU_Ready_Tx1_11 1 "Normal" 0 "Fault" ;
+VAL_ 2350510247 VCU_MCU_DisconnectHV_Tx1_10 1 "Normal" 0 "Fault" ;
+VAL_ 2350510247 VCU_MCU_OperateMode_Tx1_9 1 "Speed" 0 "Torque" ;
+VAL_ 2350510247 VCU_MCU_Forward_Tx1_8 1 "Normal" 0 "Fault" ;
+VAL_ 2350510247 VCU_MCU_Backwards_Tx1_7 1 "Normal" 0 "Fault" ;
+VAL_ 2350510247 VCU_MCU_Brake_Tx1_6 1 "Normal" 0 "Fault" ;
+VAL_ 2350510247 VCU_MCU_Drive_Tx1_5 1 "Normal" 0 "Fault" ;
+VAL_ 2350510247 VCU_MCU_Halt_Tx1_4 1 "Normal" 0 "Fault" ;
+VAL_ 278 Batt_External_Insul_Test_Status 7 "Invalid value" 6 "Description for the value '0x6'" 5 "Description for the value '0x5'" 4 "Insulation_Test_Failed_Sev3" 3 "Insulation_Test_Failed_Sev2" 2 "Insulation_Test_Failed_Sev1" 1 "Insulation_Test_In_Progress" 0 "Insulation_Test_Correct" ;
+VAL_ 278 Batt_Power_Distribution_Status 3 "Invalid value" 2 "Power Distribution In progress" 1 "Power distibuted" 0 "Power not distibuted" ;
+VAL_ 278 Battery_Operating_Status 3 "Invalid Value" 2 "Failure" 1 "Degraded" 0 "Normal" ;
+VAL_ 278 Battery_State 7 "Invalid value" 6 "Description for the value '0x6'" 5 "Description for the value '0x5'" 4 "Description for the value '0x4'" 3 "Charge State" 2 "Drive State" 1 "Park_State" 0 "Off_State" ;
+VAL_ 278 Batt_Internal_Insul_Test_Status 7 "Invalid value" 6 "Description for the value '0x6'" 5 "Description for the value '0x5'" 4 "Insulation_Test_Failed_Sev3" 3 "Insulation_Test_Failed_Sev2" 2 "Insulation_Test_Failed_Sev1" 1 "Insulation_Test_In_Progress" 0 "Insulation_Test_Correct" ;
+VAL_ 272 Battery_Equalization_Status 1 "Equalization_In_Progress" 0 "No_Equalization" ;
+VAL_ 272 Battery_Charge_Completed 1 "Charge_Completed" 0 "Charge_Not_Completed" ;
+VAL_ 1025 Battery_State_Request 7 "Invalid value" 6 "Description for the value '0x6'" 5 "Description for the value '0x5'" 4 "Description for the value '0x4'" 3 "Charge" 2 "Operational_State_Request" 1 "Park_State_Request" 0 "Off_State_Request" ;
+VAL_ 1025 Battery_Inte_InsulationTestCtrl 3 "Invalid value" 2 "Test_Not_Allowed" 1 "Test_Allowed&ResultInhibited" 0 "TestAllowed&ResultNotInhibited" ;
+VAL_ 1025 Battery_Ext_Insulation_Test_Ctrl 3 "Invalid value" 2 "Test_Not_Allowed" 1 "Test_Allowed&ResultInhibited" 0 "TestAllowed&ResultNotInhibited" ;
+
